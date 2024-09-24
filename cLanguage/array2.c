@@ -54,6 +54,24 @@ void main() {
 	//  나이 : 24세
 	//  연락처 : 010-1234-9876
 	
+	char name[10], tel[20];
+	int age;
+
+	printf("이름 입력 : ");
+	gets_s(name, sizeof(name) );
+	printf("나이 입력 : ");
+	scanf_s("%d", &age);
+
+	//fflush(stdin);
+	getchar();  // getch()
+
+	printf("연락처 : ");
+	gets_s(tel, sizeof(tel));
+
+	printf("이름 : %s \n ", name);
+	printf("나이 : %d세 \n", age);
+	printf("연락처 : %s \n", tel);
+
 	
 	
 	
