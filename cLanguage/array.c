@@ -46,4 +46,24 @@ void main() {
 	// 각 박스안에 드렁있는 사과 갯수이다.
 	// 이중 50개 이상 사과박스는 몇번째 몇번째 박스인지 출력
 
+	for (int i = 0; i < 10; i++) {
+		if (apple[i] >= 50) {
+			printf("%d번째 박스 \n", i + 1);
+		}
+	}
+
+	int grape[5];
+	// 포도 5송이가 이다.
+	// 한송이에 포도가 몇알 달려 있는지 입력 하여
+	//  grape배열에 저장 하고 전체 출력하세요
+	for (int i = 0; i < 5; i++) {
+		printf("%d번째 포도의 갯수 : ", i + 1);
+		//scanf_s("%d", &grape[i]);
+		scanf_s("%d", grape + i);
+	}
+	for (int i = 0; i < 5; i++) {
+		printf("%d \n", grape[i]);
+	}
+
+
 }
