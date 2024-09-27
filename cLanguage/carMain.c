@@ -28,7 +28,7 @@ void main() {
 	print_status(&car); //현재 차 상태 출력
 
 	while (1) {
-		gotoxy(10, 14);
+		//gotoxy(10, 14);
 		//센서 값 받기
 		int read_left = sensor_left();
 		int read_right = sensor_right();
@@ -51,12 +51,21 @@ void main() {
 			move_car(&car, 0, 0);
 			break;
 		}
-		draw(&car);
-		gotoxy(0, 15);
+		//draw(&car);
+		//gotoxy(0, 15);
 		print_status(&car);
 		Sleep(1000); //usleep(1000000);
 		system("cls");
+		// 차량 운행 경로 기록 하기
+		record_drive(&car);
 	}
+
+
+	for (int i = 0; i < cnt; i++) {
+		printf("\n====  %d. ====\n", i + 1);
+		print_status(record[i]);
+	}
+
 
 
 	/*printf("차량을 동쪽으로 속도 20으로 이동한다.\n");

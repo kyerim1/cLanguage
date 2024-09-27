@@ -12,12 +12,16 @@ typedef struct {
 	char direction; //방향 - N ,S ,W ,E
 }carStatus;
 
+//전역 
+carStatus* record[20];
+int cnt;
+
 void init(carStatus*);// 차 초기화
 void print_status(carStatus*); //상태 출력
 void move_car(carStatus*, int, int);// 차 이동
 int sensor_left();
 int sensor_right();
-
+void record_drive(carStatus*); // 운행 기록
 
 //autoDriving.h
 #endif
