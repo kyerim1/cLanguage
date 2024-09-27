@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <Windows.h>
 typedef struct {
 	int x_pos; // x축 좌표
 	int y_pos; //y축 좌표
@@ -14,6 +14,9 @@ typedef struct {
 
 void init(carStatus*);// 차 초기화
 void print_status(carStatus*); //상태 출력
+void move_car(carStatus*, int, int);// 차 이동
+int sensor_left();
+int sensor_right();
 
 
 //autoDriving.h
